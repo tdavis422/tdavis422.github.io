@@ -1,4 +1,4 @@
-Artifact Descriptiom
+Artifact Description\n
     The artifact I used was the prototype thermostat project from CS-350 (Emerging System Architecture & Technology). We were to use the CCS3220S Launchpad to develop a program that used the temperature sensor on the board to make the board work like a thermostat with only heat control. This project was finished at the end of April 2024.
 Artifact Justification
 	I chose this artifact for the ePortfolio to show how I have worked with micro-processors on the off-chance that I am working on micro-processors in the future to show that programming for this new form of technology is not as hard as it sounds. There were a few specific components that showcase my skills in software development. One of them was to be able to determine how to properly calculate the temperature being read from the sensor since we were not given the correct equation for it. I added a piece of code to convert the program from being a heat-only system to being a mini-split system to allow for the prototype thermostat to control both heat and air conditioning.
