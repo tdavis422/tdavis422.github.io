@@ -54,6 +54,8 @@ public class InvestmentSystem {
         do {
             System.out.print("Enter number of client that you would like to change: ");
             changeChoice = scanner.nextInt();
+            //if the choice is inside the options shown, then break out of loop
+            //else, stay in loop
             if (changeChoice >= 1 && changeChoice <= numCustomers) {
                 break;
             } 
@@ -66,6 +68,8 @@ public class InvestmentSystem {
         do {
             System.out.print("Enter new service choice (1 = Brokerage, 2 = Retirement): ");
             newService = scanner.nextInt();
+            //if the choice is inside the options shown, then break out of loop
+            //else, stay in loop
             if (newService >= 1 && newService <= 2) {
                 break;
             } 
@@ -78,6 +82,7 @@ public class InvestmentSystem {
         innerChangeChoice = changeChoice;
         innerNewService = newService;
         
+        //find customer and change choice if found
         customers.stream()
                 .filter(customer -> customer.getId() == innerChangeChoice)
                 .findFirst()
