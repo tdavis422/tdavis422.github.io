@@ -328,8 +328,10 @@ int setHeatMode(int state){
          * of only one LED being able to be used is by outputting which control is being
          * called for to the console that could also be sent to the "server" once the
          * system is updated more to include internet connectivity.
+         * Updated hystersis from 2 to 5 degrees celsius to ensure no rapid switching
+         * happens with thermostat.
          * */
-        if (ambientTemperature < (setPoint - 2)){
+        if (ambientTemperature < (setPoint - 5)){
             GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
             DISPLAY(snprintf(output, 64, "Calling for heat\n\r"));
             state = HEAT_ON;
@@ -338,7 +340,7 @@ int setHeatMode(int state){
             GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_OFF);
             state = OFF;
         }
-        else if (ambientTemperature > (setPoint + 2)) {
+        else if (ambientTemperature > (setPoint + 5)) {
             GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
             DISPLAY(snprintf(output, 64, "Calling for A/C\n\r"));
             state = AC_ON;

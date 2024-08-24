@@ -82,6 +82,7 @@
         echo "User was edited", "\n";
     }
 ?>
+<!--Form used to edit user selected from index page-->
 <a href='./index.php'>Home</a>
 <form class="" action="" method="post" enctype="multipart/form-data">
     <div class="form-group">

@@ -42,6 +42,7 @@
         echo "User was added", "\n";
     }
 ?>
+<!--Form used to add user if the add user button was pressed on the home page-->
 <a href='./index.php'>Home</a>
 <form class="" action="" method="post" enctype="multipart/form-data">
     <div class="form-group">
