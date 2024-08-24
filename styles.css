@@ -3,5 +3,17 @@ a {
     font-weight: bold;
 }
 h3 {
+    color: white;
     font-weight: bold;
+}
+html {
+    background-size: cover;
+    color:black
+}
+header {
+    font-weight: bold;
+    color: white;
+}
+p {
+    color: white
 }
